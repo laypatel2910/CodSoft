@@ -9,7 +9,7 @@ public class STUDENT_GRADE_CALCULATOR {
         System.out.println("How many Subject You Have : ");
         int[] Subject_Marks_Array = new int [scanner.nextByte()];
         int Sum = 0;
-        String Grade = "";
+        String Grade;
         boolean isFail = false;
         for (int i  = 0 ; i < Subject_Marks_Array.length ; i++){
             Subject_Marks_Array[i] = 0;

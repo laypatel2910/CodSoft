@@ -6,7 +6,7 @@ public class NUMBER_GAME {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Welcome to Number Game");
-        String playAgain = " ";
+        String playAgain;
         int totalRounds = 0,totalScore = 0;
         do {
             byte userNumber, Attempts = 10;
