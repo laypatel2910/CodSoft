@@ -20,20 +20,19 @@ public class ATM_INTERFACE {
         System.out.println("Welcome to Bank's ATM\nWhat do you Want\n1 For Amount withdrawing\n2 For Amount depositing\n3 For Check Balance\n4 For Exit.");
         byte Choice = scanner.nextByte();
         int amount;
-        switch (Choice){
-            case 1:
-                System.out.println("Choose Account Type : \n1 for Saving Account \n2 for Current Account");
-                byte accountType = scanner.nextByte();
-                switch (accountType){
-                    case 1:
-                        System.out.println("Enter a Amount : ");
-                        amount = scanner.nextInt();
-                        atm_machine.saving_Account_Withdrawing(amount);
-                    case 2:
-                        System.out.println("Enter a Amount : ");
-                        amount = scanner.nextInt();
-                        atm_machine.saving_Account_Withdrawing(amount);
-                }
+        if (Choice == 1) {
+            System.out.println("Choose Account Type : \n1 for Saving Account \n2 for Current Account");
+            byte accountType = scanner.nextByte();
+            switch (accountType) {
+                case 1:
+                    System.out.println("Enter a Amount : ");
+                    amount = scanner.nextInt();
+                    atm_machine.saving_Account_Withdrawing(amount);
+                case 2:
+                    System.out.println("Enter a Amount : ");
+                    amount = scanner.nextInt();
+                    atm_machine.saving_Account_Withdrawing(amount);
+            }
         }
     }
 }
