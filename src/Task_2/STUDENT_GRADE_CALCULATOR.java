@@ -43,7 +43,7 @@ public class STUDENT_GRADE_CALCULATOR {
             System.out.println((i + 1) + "\t" + Subject_Marks_Array[i]+"\t\t" + Grade);
         }
         if(isFail){
-            System.out.println("Total Sum : " + Sum + "\nPercentage : " + Percentage + "\nGrade : " + "Fail");
+            System.out.println("Total Sum : " + Sum + "\nPercentage : " + Percentage + "\nGrade : " + "F");
         }
         else {
             if (Percentage >= 40 && Percentage <= 45) {

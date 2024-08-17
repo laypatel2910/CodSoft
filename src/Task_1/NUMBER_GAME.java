@@ -23,9 +23,9 @@ public class NUMBER_GAME {
                     totalScore++;
                     break;
                 } else if (numberToGuess < userNumber)
-                    System.out.println("too high");
+                    System.out.println(userNumber + " is too high");
                 else
-                    System.out.println("too low");
+                    System.out.println(userNumber + " is too low");
             } while (Attempts >= 0);
             if (Attempts == -1) {
                 System.out.println("Game Over \nThe correct number was " + numberToGuess +".");
