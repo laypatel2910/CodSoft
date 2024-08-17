@@ -7,10 +7,10 @@ class ATM_Machine{
         this.total_Amount = total_Amount;
     }
     public void saving_Account_Withdrawing(int withdrawing_Amount){
-
+        total_Amount -= withdrawing_Amount;
     }
     public void current_Account_Withdrawing(int withdrawing_Amount){
-
+        total_Amount -= withdrawing_Amount;
     }
 }
 public class ATM_INTERFACE {
@@ -31,7 +31,7 @@ public class ATM_INTERFACE {
                 case 2:
                     System.out.println("Enter a Amount : ");
                     amount = scanner.nextInt();
-                    atm_machine.saving_Account_Withdrawing(amount);
+                    atm_machine.current_Account_Withdrawing(amount);
             }
         }
     }
