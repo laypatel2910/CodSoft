@@ -3,16 +3,23 @@ package Task_3;
 import java.util.Scanner;
 class BankAccount {
     float balance;
+    float Limit = 25000;
     BankAccount(float balance){
         this.balance = balance;
     }
     public void saving_Account_Withdrawing(float withdrawing_Amount){
         if (withdrawing_Amount > 0 && withdrawing_Amount <= balance) {
-            balance -= withdrawing_Amount;
-            System.out.println("Successfully withdrew: $" + withdrawing_Amount);
+            if (Limit - withdrawing_Amount >= 0) {
+                balance -= withdrawing_Amount;
+                Limit -= withdrawing_Amount;
+                System.out.println("Successfully withdrew: $" + withdrawing_Amount);
+            }else {
+                System.out.println("Your available Today Limit is " + Limit);
+            }
         } else if (withdrawing_Amount > balance) {
             System.out.println("Insufficient funds.");
-        } else {
+        }
+        else {
             System.out.println("Invalid withdrawal amount.");
         }
     }
@@ -42,7 +49,7 @@ class BankAccount {
 public class ATM_INTERFACE {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        BankAccount bankAccount = new BankAccount(20000);
+        BankAccount bankAccount = new BankAccount(200000);
         System.out.println("Welcome to Bank's ATM");
         float amount;
         byte Choice;
